@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+  dev-server:
+    container_name: test-server
+    build:
+      context: .
+      dockerfile: Dockerfile.server.dev
+    ports:
+      - "3000:3000"
+      - "3334:3334"
+    volumes:
+      - .:/usr/src/app
+      - ./assets:/assets
+    command: npx nx serve api
+
