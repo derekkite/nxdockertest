@@ -44,7 +44,7 @@
     "@nx/node": "16.4.0",
     "@nx/web": "16.4.0",
     "@nx/webpack": "16.4.0",
-    "@nx/workspace": "16.4.0",
+    "@nx/workspace": "16.5.5",
     "@schematics/angular": "~16.1.0",
     "@types/jest": "^29.4.0",
     "@types/node": "~18.7.1",
@@ -65,3 +65,4 @@
     "typescript": "~5.1.3"
   }
 }
+

@@ -12,4 +12,40 @@ services:
       - .:/usr/src/app
       - ./assets:/assets
     command: npx nx serve api
+  dev-checkin:
+    container_name: test-checkin
+    build:
+      context: .
+      dockerfile: Dockerfile.server.dev
+    ports:
+      - "3001:3001"
+      - "3335:3335"
+    volumes:
+      - .:/usr/src/app
+      - ./assets:/assets
+    command: npx nx serve checkin
+  dev-fileprocessing:
+    container_name: test-fileprocessing
+    build:
+      context: .
+      dockerfile: Dockerfile.server.dev
+    ports:
+      - "3002:3002"
+      - "3336:3336"
+    volumes:
+      - .:/usr/src/app
+      - ./assets:/assets
+    command: npx nx serve fileprocessing
+  dev-sockets:
+    container_name: test-sockets
+    build:
+      context: .
+      dockerfile: Dockerfile.server.dev
+    ports:
+      - "3003:3003"
+      - "3337:3337"
+    volumes:
+      - .:/usr/src/app
+      - ./assets:/assets
+    command: npx nx serve sockets
 

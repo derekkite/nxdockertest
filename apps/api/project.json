@@ -16,10 +16,12 @@
         "tsConfig": "apps/api/tsconfig.app.json",
         "assets": ["apps/api/src/assets"],
         "isolatedConfig": true,
-        "webpackConfig": "apps/api/webpack.config.js"
+        "webpackConfig": "apps/api/webpack.config.js",
+        "generatePackageJson": true
       },
       "configurations": {
-        "development": {},
+        "development": {
+        },
         "production": {}
       }
     },
@@ -27,7 +29,8 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "api:build"
+        "buildTarget": "api:build",
+        "watch": false
       },
       "configurations": {
         "development": {

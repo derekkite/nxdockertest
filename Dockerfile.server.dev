@@ -7,7 +7,7 @@ ENV NX_API_LOG_LEVEL=DEBUG
 RUN mkdir -p $HOME
 WORKDIR $HOME
 
-RUN npm -g install @nrwl/cli@latest
+RUN npm -g install @nx/workspace@latest
 
 EXPOSE 3000
 EXPOSE 3334
