@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@nx/webpack:webpack",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
         "target": "node",
@@ -14,7 +16,9 @@
         "outputPath": "dist/apps/nags",
         "main": "apps/nags/src/main.ts",
         "tsConfig": "apps/nags/tsconfig.app.json",
-        "assets": ["apps/nags/src/assets"],
+        "assets": [
+          "apps/nags/src/assets"
+        ],
         "isolatedConfig": true,
         "webpackConfig": "apps/nags/webpack.config.js"
       },
@@ -40,14 +44,20 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/nags/**/*.ts"]
+        "lintFilePatterns": [
+          "apps/nags/**/*.ts"
+        ]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/nags/jest.config.ts",
         "passWithNoTests": true
